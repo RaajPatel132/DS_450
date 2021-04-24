@@ -1,3 +1,7 @@
+// Find the "Kth" max and min element of an array
+
+// Completed
+
 public class q3 {
     static int kthSmallest(int k, int[] arr) {
         int i;
@@ -19,18 +23,25 @@ public class q3 {
         int j = 0;
         int min = arr[0];
         for (j = 1; j < len; j++) {
-            if (arr[j] < min)
+            if (arr[j] < min) {
                 min = arr[j];
-            for (int n = j; n < arr.length - 1; n++) {
-                arr[n] = arr[n + 1];
             }
         }
+        for (j = 0; j < len; j++) {
+            if (arr[j] == min) {
+                for (int n = j; n < arr.length - 1; n++) {
+                    arr[n] = arr[n + 1];
+                }
+                // System.out.println("removed " + arr[j]);
+            }
+        }
+
         return arr;
     }
 
     public static void main(String[] args) {
-        int[] tempAr = { 1, 2, 3, 4, 5, 6, 7, 8 };
-        int kth = kthSmallest(4, tempAr);
+        int[] tempAr = { 103, 23248, 332434, 4324, 5234, 1303, 2334248, 3324434, 43424, 54234 };
+        int kth = kthSmallest(5, tempAr);
         System.out.println("Value = " + kth);
     }
 

@@ -1,3 +1,5 @@
+//  Find the maximum and minimum element in an array
+
 public class q2 {
     public static void main(String[] args) {
 
