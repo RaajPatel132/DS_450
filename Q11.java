@@ -20,7 +20,5 @@ public class Q11 {
         int[] arr = { 1, 4, 3, 4, 6, 7 };
 
         System.out.println(findDuplicate(arr));
-
     }
-
 }
